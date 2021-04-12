@@ -1,12 +1,12 @@
 {
-  "name": "express-typescript-microservice",
+  "name": "thanhmaihsk",
   "version": "0.0.1",
   "description": "",
   "main": "./dist/server.js",
   "scripts": {
     "start": "yarn build && yarn watch",
     "build": "rm -rf ./dist/* && yarn build-ts && yarn tslint",
-    "docker:build": "docker build . -t express-typescript-microservice",
+    "docker:build": "docker build . -t thanhmaihsk-server",
     "docker:setup": "yarn install && yarn docker:build && docker-compose up -d",
     "docker:start": "docker-compose start",
     "docker:stop": "docker-compose stop",
@@ -16,10 +16,10 @@
     "build-ts": "tsc",
     "tslint": "tslint -c tslint.json -p tsconfig.json"
   },
-  "author": "Hendrik Gaffo <hendrik.gaffo@meilenstein.io>",
+  "author": "Duy Nguyen <duynd1@tinhvan.com>",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "concurrently": "^4.1.2",
     "cors": "^2.8.5",
@@ -34,8 +34,9 @@
     "winston": "^3.2.1"
   },
   "devDependencies": {
+    "@types/axios": "^0.14.0",
     "@types/body-parser": "^1.17.1",
-    "@types/cors": "^2.8.6",
+    "@types/cors": "^2.8.10",
     "@types/dotenv": "^6.1.1",
     "@types/express": "^4.17.1",
     "@types/lodash": "^4.14.141"

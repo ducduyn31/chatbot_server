@@ -1,7 +1,8 @@
-import { Router } from 'express';
-import { weatherController } from './controllers';
+import {Router} from 'express';
+import {answerController} from './controllers/answer.controller';
+
 const router = Router();
 
-router.use('/weather', weatherController);
+router.use('/', answerController);
 
 export default router;
